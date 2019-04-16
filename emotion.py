@@ -68,20 +68,20 @@ class Window(QMainWindow):
 
             try:
                 # Flag for showing probability graph of only one face
-                FIRSTFACE = True
+                
                 if len(faces) > 0:
                     for x, y, width, height in faces:
-                        cropped_face = gray[y:y + height, x:x + width]
-                        test_image = cv2.resize(cropped_face, (48, 48))
-                        test_image = test_image.reshape([-1, 48, 48, 1])
+                        cropped_face = gray[y:y + height, x:x + width] #when detect face after cropped for test our model
+                        test_image = cv2.resize(cropped_face, (48, 48)) #resize for test with model(Note model image size 48x48
+                        test_image = test_image.reshape([-1, 48, 48, 1]) #reshape and grayscale
 
-                        test_image = np.multiply(test_image, 1.0 / 255.0)
+                        test_image = np.multiply(test_image, 1.0 / 255.0) #convert img to numpy 
 
                         # Probablities of all classes
                         #Finding class probability takes approx 0.05 seconds
                         start_time = time.time()
                         if frame_count % 5 == 0:
-                            probab = model.predict(test_image)[0] * 100
+                            probab = model.predict(test_image)[0] * 100 #test 
                             
                             label = np.argmax(probab)
                             probab_predicted = int(probab[label])
