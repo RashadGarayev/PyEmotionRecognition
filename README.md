@@ -77,7 +77,8 @@ Read dataset (csv file)
 - > <p align="left"> <img src="image/pic10.jpg" alt="drawing" width="400"/> </p>
 
 
-
+Loss graphics
+<p align="left"> <img src="image/loss.jpg" alt="drawing" width="500"/> </p>
 
 
 - If you have an Nvidia GPU, then you can install `tensorflow-gpu` package. It will make things run a lot faster.
