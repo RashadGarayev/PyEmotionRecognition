@@ -66,7 +66,7 @@ Read dataset (csv file)
 
 > <p align="left"> <img src="image/pic6.jpg" alt="drawing" width="500"/> </p>
 
-## create Convolutional neural network keras ##
+## create Convolutional Neural Network Keras (CNN) ##
 
 > <p align="left"> <img src="image/pic7.jpg" alt="drawing" width="500"/> </p>
 
