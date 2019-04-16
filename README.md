@@ -85,7 +85,7 @@ Depending on the hardware configuration of your system, the execution time will 
 
 
 ## Help
-If any issues and suggestions to me, you can create an  [issue](https://github.com/RashadGarayev/emotions/issues) or reach out on Facebook [Rashad Garayev](https://www.facebook.com/fly.trion) .
+If any issues and suggestions to me, you can create an  [issue](https://github.com/RashadGarayev/PyEmotionRecognition/issues) or reach out on Facebook [Rashad Garayev](https://www.facebook.com/fly.trion) .
 
 
 
