@@ -15,7 +15,9 @@ class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
         loadUi('graph.ui', self)
-        
+        self.setWindowTitle('Emotion Recognition')
+        width,height=1110,738
+        self.setFixedSize(width, height)
         self.pushButton.clicked.connect(self.start)
         self.pushButton_2.clicked.connect(self.closed)
     def closed(self):
@@ -141,6 +143,6 @@ class Window(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = Window()
-    window.setWindowTitle("LabVision")
+    
     window.show()
     sys.exit(app.exec_())
