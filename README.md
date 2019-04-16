@@ -43,10 +43,45 @@ python emotion.py
 Dataset [install from kaggle](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data) 
 
 
+# Training and Test #
 
--Emotion classification test accuracy: 88%
+Read dataset (csv file)
+<p align="center"> <img src="image/pic1.jpg" alt="drawing" width="500"/> </p>
+
+
+----------
+28709 training image in Dataset
+
+<p align="center"> <img src="image/pic2.jpg" alt="drawing" width="500"/> </p>
+
+> <p align="left"> <img src="image/pic3.jpg" alt="drawing" width="500"/> 
+
+> </p> <p align="right"> <img src="image/pic4.jpg" alt="drawing" width="500"/> </p>
+
+
+----------
+
+3589 test image in Dataset
+<p align="left"> <img src="image/pic5.jpg" alt="drawing" width="500"/> </p>
+
+> <p align="left"> <img src="image/pic6.jpg" alt="drawing" width="500"/> </p>
+
+## create Convolutional neural network keras ##
+
+> <p align="left"> <img src="image/pic7.jpg" alt="drawing" width="500"/> </p>
+
+> <p align="left"> <img src="image/pic8.jpg" alt="drawing" width="300"/> </p>
+
+----------
+
+- > <p align="left"> <img src="image/pic10.jpg" alt="drawing" width="400"/> </p>
+
+
+
+
+
 - If you have an Nvidia GPU, then you can install `tensorflow-gpu` package. It will make things run a lot faster.
-Depending on the hardware configuration of your system, the execution time will vary. On CPU, training will be slow. Please use onlu tensorflow_gpu  GPU .
+Depending on the hardware configuration of your system, the execution time will vary. On CPU, training will be slow. Please use onlu tensorflow-gpu(Cuda Toolkit and CudNN).
 
 
 ## Help
