@@ -16,19 +16,19 @@ class Window(QMainWindow):
         super(Window, self).__init__()
         loadUi('graph.ui', self)
         
-        self.pushButton.clicked.connect(self.startdetect)
+        self.pushButton.clicked.connect(self.start)
         self.pushButton_2.clicked.connect(self.closed)
     def closed(self):
         self.close()
-    def startdetect(self):
+    def start(self):
         self.capture = cv2.VideoCapture(0)
         self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         self.timer = QtCore.QTimer(self)
-        self.timer.timeout.connect(self.update_frame)
+        self.timer.timeout.connect(self._frame)
         self.timer.start(4)
 
-    def update_frame(self):
+    def _frame(self):
         ret, self.image = self.capture.read()
         faceCascade = cv2.CascadeClassifier(
             'Cascade/haarcascade-frontalface-default.xml')
@@ -123,9 +123,9 @@ class Window(QMainWindow):
                 pass
         
         
-        self.displayImage(self.image, 1)
+        self.display(self.image, 1)
 
-    def displayImage(self, img, windows=1):
+    def display(self, img, windows=1):
         qformat = QtGui.QImage.Format_Indexed8
         if len(img.shape) == 3:
             if img.shape[2] == 4:
